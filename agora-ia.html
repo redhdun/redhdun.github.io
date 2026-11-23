@@ -1,0 +1,37 @@
+---
+layout: page
+title: Ágora IA
+permalink: /agora-ia/
+description: Un foro pequeño y recurrente para pensar juntos la inteligencia artificial, empezando por lo que nos preocupa y lo que sentimos.
+---
+<p class="proxima"><strong>Próxima sesión:</strong> {% if site.agora_proxima != "" %}{{ site.agora_proxima }}{% if site.agora_lugar != "" %} · {{ site.agora_lugar }}{% endif %}{% else %}fecha por anunciar. Escríbenos a {{ site.email }} si quieres que te avisemos.{% endif %}</p>
+
+<h2>Cómo funciona</h2>
+<p>No es una conferencia. Una persona modera y anima la conversación; el público habla primero. Abrimos con las preocupaciones, dudas, incógnitas y emociones que nos despierta la IA, y las ponemos a dialogar con la mirada de profesionales de distintas áreas.</p>
+
+<ol class="momentos claro">
+  <li><span>1</span><div><strong>Romper el hielo.</strong> Encuestas en vivo, preguntas abiertas y juegos para que todos participen.</div></li>
+  <li><span>2</span><div><strong>Debatir.</strong> Ponemos en común lo que pensamos y lo comparamos con lo que responde la máquina.</div></li>
+  <li><span>3</span><div><strong>Aterrizar.</strong> Llevamos la conversación a cómo se aplica en la vida real y en cada profesión.</div></li>
+</ol>
+
+<h2>“Saquen sus IAs”</h2>
+<p>En cada sesión comparamos en vivo lo que responden distintos asistentes de inteligencia artificial a la misma pregunta. Ver sus aciertos, sus errores y sus silencios es una forma directa de pensar qué es y qué no es esta tecnología.</p>
+
+<h2>Preguntas para empezar</h2>
+<ul class="detonadoras">
+  <li>¿Qué es la IA para ti? ¿Con qué la relacionas?</li>
+  <li>¿Qué te preocupa de la IA en tu profesión?</li>
+  <li>¿Por qué una máquina responde esto y nosotros no?</li>
+</ul>
+
+<h2>Bitácora del Ágora</h2>
+<p>Cada sesión se documenta. Con el tiempo, estas relatorías forman un archivo de lo que la comunidad universitaria piensa y siente sobre la inteligencia artificial.</p>
+{% assign sesiones = site.tags["Ágora IA"] %}
+{% if sesiones and sesiones.size > 0 %}
+<ul class="indice">
+  {% for post in sesiones %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <span class="meta">{% include fecha.html fecha=post.date %}</span></li>{% endfor %}
+</ul>
+{% else %}
+<p class="vacio">Todavía no hay relatorías. La primera aparecerá aquí después de la primera sesión.</p>
+{% endif %}

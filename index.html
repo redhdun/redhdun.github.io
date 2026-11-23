@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<section class="portada">
+  <div class="portada-interior">
+    <div class="portada-texto">
+      <p class="sobretitulo">{{ site.title }}</p>
+      <h1>{{ site.lema }}</h1>
+      <p class="entradilla">{{ site.description }}</p>
+      <p class="acciones">
+        <a class="boton" href="{{ '/participar/' | relative_url }}">Proponer algo</a>
+        <a class="boton secundario" href="{{ '/agora-ia/' | relative_url }}">Conocer el Ágora IA</a>
+      </p>
+    </div>
+    <figure class="portada-figura">
+      <img src="{{ '/assets/img/buho.png' | relative_url }}" alt="Búho mitad natural y mitad digital, símbolo de la Red" width="349" height="293">
+    </figure>
+  </div>
+</section>
+
+<section class="banda modelo">
+  <blockquote class="lema">No hacemos más eventos; hacemos que lo que ya pasa se encuentre.</blockquote>
+  <p class="intro">Somos un paraguas: acogemos, conectamos y orientamos lo que profesores, estudiantes y grupos de la Universidad ya hacen o quieren hacer en torno a la tecnología y lo humano.</p>
+  <ol class="funciones">
+    <li><h3>Acoger</h3><p>Recibimos propuestas de cualquier persona o grupo: talleres, lecturas, conversaciones, proyectos.</p></li>
+    <li><h3>Conectar</h3><p>Mantenemos un <a href="{{ '/mapa/' | relative_url }}">mapa vivo</a> de quién en la UN piensa la relación entre tecnología y humanidad.</p></li>
+    <li><h3>Orientar</h3><p>Si llegas con una inquietud, te sugerimos lecturas, contactos y acompañamiento.</p></li>
+    <li><h3>Conversar en pequeño</h3><p>Tertulias y círculos cercanos en lugar de auditorios.</p></li>
+    <li><h3>Dejar rastro</h3><p>Todo queda registrado en la <a href="{{ '/bitacora/' | relative_url }}">bitácora</a>.</p></li>
+  </ol>
+</section>
+
+<section class="banda agora-destacado">
+  <div>
+    <p class="sobretitulo">Formato insignia</p>
+    <h2>Ágora IA</h2>
+    <p>Un foro pequeño y recurrente para hablar de inteligencia artificial: empezamos por lo que nos preocupa, lo que nos inquieta y lo que sentimos, y lo contrastamos con la mirada de personas de distintas disciplinas.</p>
+    <p class="proxima"><strong>Próxima sesión:</strong> {% if site.agora_proxima != "" %}{{ site.agora_proxima }}{% if site.agora_lugar != "" %} · {{ site.agora_lugar }}{% endif %}{% else %}fecha por anunciar{% endif %}</p>
+    <a class="boton" href="{{ '/agora-ia/' | relative_url }}">Cómo funciona</a>
+  </div>
+  <ol class="momentos">
+    <li><span>1</span>Romper el hielo</li>
+    <li><span>2</span>Debatir</li>
+    <li><span>3</span>Aterrizar en la vida real</li>
+  </ol>
+</section>
+
+<section class="banda">
+  <div class="encabezado-seccion">
+    <h2>Bitácora</h2>
+    <a href="{{ '/bitacora/' | relative_url }}">Ver todo</a>
+  </div>
+  <div class="rejilla">
+    {% for post in site.posts limit:3 %}
+      {% include tarjeta.html post=post %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="banda lineas">
+  <div class="encabezado-seccion"><h2>Líneas de trabajo</h2><a href="{{ '/humanidades-digitales/' | relative_url }}">¿Qué son las humanidades digitales?</a></div>
+  <div class="rejilla cuatro">
+    <div><h3>Investigación</h3><p>Memoria, territorio, lenguas y cultura estudiados con métodos digitales.</p></div>
+    <div><h3>Formación</h3><p>Talleres y semilleros para aprender haciendo.</p></div>
+    <div><h3>Archivos y datos abiertos</h3><p>Preservar, organizar y compartir fuentes y datos.</p></div>
+    <div><h3>Pensamiento y debate público</h3><p>IA, plataformas y cultura digital. Aquí vive el Ágora IA.</p></div>
+  </div>
+</section>

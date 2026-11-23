@@ -1,0 +1,29 @@
+---
+layout: page
+title: Mapa de la red
+permalink: /mapa/
+description: Un mapa vivo de quiénes en la Universidad Nacional piensan la relación entre tecnología y humanidad.
+---
+{% assign anfitriones = site.data.red | where: "anfitrion", true %}
+{% assign miembros = site.data.red | where_exp: "p", "p.anfitrion != true" %}
+
+<h2>Anfitriones</h2>
+<p>Coordinamos la red, curamos lo que entra bajo el paraguas y ayudamos a que las iniciativas se encuentren.</p>
+<ul class="personas">
+  {% for p in anfitriones %}
+  <li><strong>{% if p.enlace %}<a href="{{ p.enlace }}">{{ p.nombre }}</a>{% else %}{{ p.nombre }}{% endif %}</strong><span>{{ p.rol }} · {{ p.dependencia }}</span><span class="temas-persona">{{ p.temas }}</span></li>
+  {% endfor %}
+</ul>
+
+<h2>Personas y grupos</h2>
+{% if miembros.size > 0 %}
+<ul class="personas">
+  {% for p in miembros %}
+  <li><strong>{% if p.enlace %}<a href="{{ p.enlace }}">{{ p.nombre }}</a>{% else %}{{ p.nombre }}{% endif %}</strong><span>{{ p.rol }} · {{ p.dependencia }}</span><span class="temas-persona">{{ p.temas }}</span></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="vacio">El mapa apenas empieza.</p>
+{% endif %}
+
+<p>¿Trabajas estos temas en tu clase, grupo o investigación? <a href="{{ '/participar/' | relative_url }}">Escríbenos</a> y te sumamos al mapa.</p>

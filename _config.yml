@@ -1,0 +1,38 @@
+# ============================================================
+#  CONFIGURACIÓN GENERAL DEL SITIO
+#  Cambia los textos entre comillas. Después de guardar,
+#  GitHub vuelve a publicar el sitio en uno o dos minutos.
+# ============================================================
+
+# Nombre de la red
+title: "Red de Humanidades Digitales UN"
+short_title: "Red HD UN"
+lema: "Humanizar la tecnología"
+description: "Un punto de encuentro en la Universidad Nacional para pensar críticamente lo digital desde las humanidades. No estamos contra la tecnología: queremos tecnología con sentido humano."
+affiliation: "Iniciativa de profesores y estudiantes de la Universidad Nacional de Colombia"
+
+# Canal de contacto
+email: "mmillanm@unal.edu.co"
+
+# Próxima sesión del Ágora IA. Déjalo vacío ("") si aún no hay fecha.
+agora_proxima: ""
+agora_lugar: ""
+
+lang: es
+timezone: America/Bogota
+
+# Si tu repositorio se llama USUARIO.github.io, deja baseurl vacío
+# y pon url: "https://USUARIO.github.io"
+url: ""
+baseurl: ""
+
+permalink: /bitacora/:year/:month/:title/
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+exclude:
+  - README.md
+  - PLANTILLA-ENTRADA.md
+  - PLANTILLA-AGORA.md
