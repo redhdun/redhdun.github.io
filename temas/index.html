@@ -1,0 +1,14 @@
+---
+layout: default
+title: Temas
+---
+<section class="banda archivo">
+  <h1>Temas</h1>
+  <p class="nube">{% for tag in site.tags %}<a href="#{{ tag[0] | slugify: "latin" }}">{{ tag[0] }} <small>{{ tag[1].size }}</small></a>{% endfor %}</p>
+  {% for tag in site.tags %}
+  <h2 class="anio" id="{{ tag[0] | slugify: "latin" }}">{{ tag[0] }}</h2>
+  <ul class="indice">
+    {% for post in tag[1] %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <span class="meta">{% include fecha.html fecha=post.date %}</span></li>{% endfor %}
+  </ul>
+  {% endfor %}
+</section>

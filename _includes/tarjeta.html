@@ -1,0 +1,8 @@
+<article class="tarjeta">
+  <p class="meta">{% include fecha.html fecha=include.post.date %} · {{ include.post.author }}</p>
+  <h3><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h3>
+  <p>{{ include.post.description | default: include.post.excerpt | strip_html | truncatewords: 40 }}</p>
+  {%- if include.post.tags.size > 0 %}
+  <p class="etiquetas">{% for t in include.post.tags %}<a href="{{ '/temas/' | relative_url }}#{{ t | slugify: "latin" }}">{{ t }}</a>{% endfor %}</p>
+  {%- endif %}
+</article>

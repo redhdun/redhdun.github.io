@@ -1,0 +1,26 @@
+# ============================================================
+#  MAPA VIVO DE LA RED
+#  Cada persona o grupo es un bloque que empieza con "- nombre:".
+#  Copia un bloque, pégalo al final y cambia los datos.
+#  "anfitrion: true" marca a quienes coordinan la red.
+#  "enlace" es opcional.
+# ============================================================
+
+- nombre: "Laura Jiménez Roncancio"
+  rol: "Anfitriona"
+  dependencia: "Dependencia por definir"
+  temas: "Coordinación de la red"
+  anfitrion: true
+
+- nombre: "Tu nombre aquí"
+  rol: "Anfitrión"
+  dependencia: "Dependencia por definir"
+  temas: "Coordinación de la red"
+  anfitrion: true
+
+# Ejemplo de cómo se agrega alguien más (borra el # de cada línea):
+# - nombre: "Nombre Apellido"
+#   rol: "Profesora"
+#   dependencia: "Facultad de Ciencias Humanas"
+#   temas: "Historia digital, archivos sonoros"
+#   enlace: "https://..."

@@ -1,0 +1,20 @@
+---
+layout: default
+title: Bitácora
+---
+<section class="banda archivo">
+  <h1>Bitácora</h1>
+  <p class="entradilla">El rastro de lo que pasa bajo el paraguas: relatorías del Ágora IA, notas, reseñas y reflexiones de quienes participan.</p>
+  {%- assign anio_actual = "" -%}
+  {%- for post in site.posts -%}
+    {%- assign anio = post.date | date: "%Y" -%}
+    {%- if anio != anio_actual -%}
+      {%- unless forloop.first %}</div>{% endunless %}
+      <h2 class="anio">{{ anio }}</h2>
+      <div class="lista">
+      {%- assign anio_actual = anio -%}
+    {%- endif %}
+    {% include tarjeta.html post=post %}
+    {%- if forloop.last %}</div>{% endif -%}
+  {%- endfor %}
+</section>

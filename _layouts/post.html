@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{%- assign palabras = content | number_of_words -%}
+{%- assign minutos = palabras | divided_by: 200 | floor | plus: 1 -%}
+<article class="lectura">
+  <header class="cabeza-entrada">
+    {%- if page.tags.size > 0 %}
+    <p class="etiquetas">{% for t in page.tags %}<a href="{{ '/temas/' | relative_url }}#{{ t | slugify: "latin" }}">{{ t }}</a>{% endfor %}</p>
+    {%- endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="entradilla">{{ page.description }}</p>{% endif %}
+    <p class="meta">Por <strong>{{ page.author }}</strong> · {% include fecha.html fecha=page.date %} · {{ minutos }} min de lectura</p>
+  </header>
+  <div class="cuerpo">
+    {{ content }}
+  </div>
+  <nav class="vecinas" aria-label="Más entradas">
+    {% if page.previous %}<a href="{{ page.previous.url | relative_url }}"><span>Anterior</span>{{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
+    {% if page.next %}<a class="sig" href="{{ page.next.url | relative_url }}"><span>Siguiente</span>{{ page.next.title }}</a>{% endif %}
+  </nav>
+</article>
