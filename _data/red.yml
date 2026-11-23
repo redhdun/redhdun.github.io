@@ -7,16 +7,42 @@
 # ============================================================
 
 - nombre: "Laura Jiménez Roncancio"
-  rol: "Anfitriona"
-  dependencia: "Dependencia por definir"
+  rol: "Coordinadora"
+  dependencia: "Oficina Nacional de Gestión y Patrimonio Documental"
   temas: "Coordinación de la red"
   anfitrion: true
 
-- nombre: "Tu nombre aquí"
-  rol: "Anfitrión"
-  dependencia: "Dependencia por definir"
+- nombre: "Miguel Ángel Millán Meléndez"
+  rol: "Estudiante Auxiliar"
+  dependencia: "Departamento de Historia"
+  temas: "Coodinación de la red"
+  anfitrion: true
+
+- nombre: "Nancy Rozo Montaña"
+  rol: "Profesora Fundadora de la red" 
+  dependencia: "Escuela de Arquitectura y Urbanismo"
   temas: "Coordinación de la red"
   anfitrion: true
+
+- nombre: "Hernan Gustavo Cortes Mora"
+  rol: "Profesor Fundador de la red"
+  dependencia: "Oficina de Gestión Ambiental Sede Bogotá"
+  temas: "Coordinación de la red"
+  anfitrion: true
+
+- nombre: "Laura Sánchez Alvarado"
+  rol: "Profesora Fundadora de la red"
+  dependencia: "Archivo Histórico" 
+  temas: "Coordinación de la red" 
+  anfitrion: true
+
+- nombre: "Paolo Vignolo" 
+  rol: "Profesor Fundador de la red" 
+  dependencia: "Departamento de Historia" 
+  temas: "Coordinación de la red" 
+  anfitrion: true
+  
+
 
 # Ejemplo de cómo se agrega alguien más (borra el # de cada línea):
 # - nombre: "Nombre Apellido"
